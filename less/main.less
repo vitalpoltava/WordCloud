@@ -1,0 +1,54 @@
+/* Mixin */
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.header {
+  display: inline-block;
+  margin: 15px;
+  .border-radius();
+  background-color: #add8e6;
+  border: 1px solid #0b97c4;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.word {
+  font-family: Arial;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  .border-radius();
+  &:hover {
+    background-color: lavender;
+  }
+}
+
+.left {
+  float: left;
+  width: 60%;
+}
+
+.right {
+  float: left;
+  width: 35%;
+  border: 1px solid gray;
+  min-height: 200px;
+  padding: 10px;
+  font: normal 14px Arial;
+  .positive {
+    font-weight: bold;
+    color: #00ff00;
+  }
+  .neutral {
+    font-weight: bold;
+    color: slategray;
+  }
+  .negative {
+    font-weight: bold;
+    color: red;
+  }
+}
