@@ -34,11 +34,8 @@ define(function(require) {
             this.wordView = new WordView();
             this.words.forEach(function(el) {
                 var newWord = $(this.wordView.render(el));
-                newWord.data('word', el.toJSON());
                 element.append(newWord);
-                newWord.click(function() {
-                    this.meta.render(el);
-                }.bind(this));
+                newWord.click(function() { this.meta.render(el); }.bind(this));
             }.bind(this));
         }
     });
