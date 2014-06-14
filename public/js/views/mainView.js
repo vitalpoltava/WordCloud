@@ -7,7 +7,7 @@ define(function(require) {
     var dataFeed = require('text!../data_feed/data.json');
     var Words = require('../collections/words');
     var WordView = require('./word');
-    var Meta = require('./meta')
+    var Meta = require('./meta');
 
     return Backbone.View.extend({
         template: template,
@@ -15,7 +15,7 @@ define(function(require) {
         templateModel: {},
 
         initialize: function() {
-            this.data = JSON.parse(dataFeed)['topics'];
+            this.data = JSON.parse(dataFeed)['topics'] || [];
             this.words = new Words(this.data);
             this.words.markWithColour();
             this.words.addTextSize();

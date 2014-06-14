@@ -40,7 +40,7 @@ define(function(require) {
 
             data.forEach(function(el) {
                 var volume = parseInt(el[prop], 10) || 0;
-                el.textSize = sizes[parseInt(volume/step)];
+                el.textSize = sizes[parseInt(volume/step)] || sizes[0];
             });
             this.reset();
             this.add(_.shuffle(data));
