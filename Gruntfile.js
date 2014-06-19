@@ -13,14 +13,37 @@ module.exports = function(grunt) {
                     'public/css/main.css': ['less/main.less']
                 }
             }
+        },
+        copy: {
+            main: {
+                files: [
+                    {expand: true, flatten: true, src: ['src/app/templates/*.html'], dest: 'public/js/templates', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['src/data_feed/*.json'], dest: 'public/js/data_feed', filter: 'isFile'}
+                ]
+            }
+        },
+        uglify: {
+            options: {
+                mangle: false
+            },
+            my_target: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/app',
+                    src: '**/*.js',
+                    dest: 'public/js'
+                }]
+            }
         }
     });
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Default task.
-    grunt.registerTask('default', ['less']);
+    grunt.registerTask('default', ['less', 'uglify', 'copy']);
     grunt.registerTask('styles', ['less']);
 
 };
