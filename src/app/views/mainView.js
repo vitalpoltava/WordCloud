@@ -3,11 +3,11 @@ define(function(require) {
 
     var _ = require('underscore');
     var Backbone = require('backbone');
-    var template = require('jst!../templates/mainView.html');
-    var dataFeed = require('text!../data_feed/data.json');
-    var Words = require('../collections/words');
-    var WordView = require('./word');
-    var Meta = require('./meta');
+    var template = require('jst!templates/mainView.html');
+    var dataFeed = require('text!data_feed/data.json');
+    var Words = require('collections/words');
+    var WordView = require('views/word');
+    var Meta = require('views/meta');
 
     return Backbone.View.extend({
         template: template,

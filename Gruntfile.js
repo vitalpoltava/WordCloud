@@ -34,6 +34,29 @@ module.exports = function(grunt) {
                     dest: 'public/js'
                 }]
             }
+        },
+        jasmine: {
+            cloud: {
+                src: "public/js/bootstraper.js",
+                options: {
+                    browsers: ['chrome'],
+                    host: 'http://localhost:8000/',
+                    specs: 'test/*.js',
+                    template: require('grunt-template-jasmine-requirejs'),
+                    templateOptions: {
+                        requireConfig: {
+                            baseUrl: 'public/js'
+                        }
+                    }
+                }
+            }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 8000
+                }
+            }
         }
     });
 
@@ -41,9 +64,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
     // Default task.
     grunt.registerTask('default', ['less', 'uglify', 'copy']);
     grunt.registerTask('styles', ['less']);
+    grunt.registerTask('tests', ['connect:server', 'jasmine:cloud']);
+
 
 };

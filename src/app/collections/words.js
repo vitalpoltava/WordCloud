@@ -3,7 +3,7 @@ define(function(require) {
 
     var _ = require('underscore');
     var Backbone = require('backbone');
-    var Word = require('../models/word');
+    var Word = require('models/word');
 
     return Backbone.Collection.extend({
         model: Word,

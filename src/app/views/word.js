@@ -3,7 +3,7 @@ define(function(require) {
 
     var _ = require('underscore');
     var Backbone = require('backbone');
-    var template = require('jst!../templates/word.html');
+    var template = require('jst!templates/word.html');
 
     return Backbone.View.extend({
         template: template,
