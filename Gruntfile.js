@@ -39,7 +39,6 @@ module.exports = function(grunt) {
             cloud: {
                 src: "public/js/bootstraper.js",
                 options: {
-                    browsers: ['chrome'],
                     host: 'http://localhost:8000/',
                     specs: 'test/*.js',
                     template: require('grunt-template-jasmine-requirejs'),
