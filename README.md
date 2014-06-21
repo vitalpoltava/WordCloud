@@ -1,7 +1,7 @@
 WordCloud
 =========
 
-Simple Word Cloud based on a file feed with respective data. After rendering the cloud of words you can click them to see the meta data on the right side of the screen. `Green` words stands for most positive mentions of the term, `red` - negative, `gray` - neutral. As usually, the word's size means dependence on mentions quantity.
+Simple Word Cloud based on a file feed with respective data. After rendering the cloud of words you can click them to see the meta data on the right side of the screen. `Green` words stands for most positive mentions of the term, `red` - negative, `gray` - neutral. As usually, the word's size means dependency on mentions quantity.
 
 Usage
 -----
