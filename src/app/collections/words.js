@@ -32,7 +32,7 @@ define(function(require) {
          */
         addTextSize: function() {
             var sizes = [14, 16, 18, 20, 24, 35]; // text sizes pre-defined
-            var prop = 'burst';
+            var prop = 'volume';
             var data = _.sortBy(this.toJSON(), function(el) {return el[prop]});
             var least = data[0][prop];
             var most = data[data.length-1][prop];
