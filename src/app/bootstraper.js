@@ -19,6 +19,10 @@ requirejs.config({
 
 define(function(require) {
     'use strict';
+
+    $('body').append('<div id="main"></div>'); // add main wrapper
+
+    // init application
     var App = require('views/mainView');
     new App();
 });
