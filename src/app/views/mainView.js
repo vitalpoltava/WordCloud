@@ -29,14 +29,15 @@ define(function(require) {
         },
 
         renderWords: function() {
+            var that = this;
             this.meta = new Meta({el: '.right'});
             var element = this.$el.find('.left');
             this.wordView = new WordView();
             this.words.forEach(function(el) {
-                var newWord = $(this.wordView.render(el));
+                var newWord = $(that.wordView.render(el));
                 element.append(newWord);
-                newWord.click(function() { this.meta.render(el); }.bind(this));
-            }.bind(this));
+                newWord.click(function() { that.meta.render(el); });
+            });
         }
     });
 });
