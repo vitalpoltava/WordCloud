@@ -6,9 +6,9 @@ Simple Word Cloud based on a file feed with respective data. After rendering the
 Usage
 -----
 
-1. Clone repo
-2. run `npm install`
-3. run `grunt` (this will compile the project)
-4. run `node app`
-5. launch the application as `http://localhost:8000`
-6. to run the tests (Jasmine + PhantomJS) run `grunt tests`
+1. Clone repo `git clone https://github.com/vitalpoltava/WordCloud.git`;
+2. Run `npm install` (to load dependencies);
+3. Run `grunt` (this will compile the project);
+4. Run `node app` (to start the server);
+5. Launch the application as `http://localhost:8000` in your browser;
+6. To run the tests (Jasmine + PhantomJS) run `grunt tests`.
